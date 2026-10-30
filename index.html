@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="announcement">
+        Sign up and get 20% off your first order.
+        <a href="#newletter">Sign Up Now</a>
+        <button class="close-banner" onclick="this.parentElement.remove()">x</button>
+    </div>
+
+    <header class="container header">
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <a class="logo" href="index.html">SHOP.CO</a>
+
+        <nav id="mainNav">
+            <a href="#arrivals">Shop</a>
+            <a href="#top-selling">On Sale</a>
+            <a href="#arrivals">New Arrivals</a>
+            <a href="#brands">Brands</a>
+        </nav>
+
+        <input class="search" id="siteSearch" placeholder="Seach for products...">
+
+        <a class="cart" href="product.html">🛒<span id="cartCount">0</span></a>
+        <a href="#" aria-label="Account"></a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <h1>FIND CLOTHES<br>THAT WATCHES<br>YOUR STYLE</h1>
+                    <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
+                    <a class="button dark-button" href="#arrival">Shop Now</a>
+
+                    <div class="stats"><div><strong>200+</strong><small>International Brands</small></div></div>
+
+                    <div><strong>2,000+</strong><small>High-Quality Products</small></div>
+
+                    <div><strong>30,000+</strong><small>Happy Customers</small></div>
+                </div>
+            
+
+                <div class="hero-image">
+                    <img src="images/Rectangle 2.png" alt="Clothing product" width="300">
+                    <span class="spark spark-1">✦</span>
+                    <span class="spark spark-2">✦</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="brand-strip" id="brands">
+            <div class="container-brands">
+                <span>VERSACE</span>
+                <span>ZARA</span>
+                <span>GUCCI</span>
+                <span>PRADA</span>
+                <span>Calvien Klien</span>
+            </div>
+        </section>
+
+        <section class="container section" id="arrivals">
+            <h2>NEW ARRIVALS</h2>
+            <div class="product-grid" id="newArrivals">
+                <img src="images/Frame 32.png" alt="">
+                <img src="images/Frame 33.png" alt="">
+                <img src="images/Frame 34.png" alt="">
+                <img src="images/Frame 38.png" alt="">
+            </div>
+            <button class="button view-button" data-expand="newArrivals">View All</button>
+        </section>
+
+        <section class="container section divider" id="top-selling">
+            <h2>TOP SELLING</h2>
+            <div class="product-grid" id="top-products">
+                <img src="images/Frame 32 (1).png" alt="">
+                <img src="images/Frame 33 (1).png" alt="">
+                <img src="images/Frame 34 (1).png" alt="">
+                <img src="images/Frame 38 (1).png" alt="">
+            </div>
+            <button class="button view-button" data-expand="topProducts">View All</button>
+        </section>
+
+        <section class="container dress-section">
+            <h2>BROWSE BY DRESS STYLE</h2>
+            <div class="style-grid">
+                <a href="#arrivals?category=casual" class="style-card">
+                    <span>Casual</span>
+                    <img src="https://i.pinimg.com/originals/42/e2/62/42e26228eb4801432b404f64c43438aa.jpg" alt="Clothing product">
+                </a>
+
+                <a href="#arrivals" class="style-card">
+                    <span>Style</span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDQ037hMssyluXTdaSiZ13cAgLO8-Ajr52m2ml7g71-MAULWFdx69GO0w&s=10" alt="Clothing product">
+                </a>
+
+                <a href="#arrivals" class="style-card">
+                    <span>Fashion</span>
+                    <img src="https://www.shutterstock.com/image-photo/full-length-young-tattooed-woman-260nw-2316166267.jpg" alt="Clothing product">
+                </a>
+
+                <a href="#arrivals?category=gym" class="style-card">
+                    <span>Gym</span>
+                    <img src="https://i0.wp.com/zaloramalaysiablog.wpcomstaging.com/wp-content/uploads/2026/09/aerie-6717-8855274-3.webp?resize=709%2C1024&ssl=1" alt="Clothing product">
+                </a>
+            </div>
+        </section>
+
+        <section class="container section">
+            <h2>OUR HAPPY CUSTOMERS</h2>
+            <div class="product-grid review-grid" id="review"></div>
+            <div class="review-control">
+
+                <div class="tab-content active" id="reviewsContent">
+
+            <div class="reviews-toolbar">
+                <h2>All Reviews <span>(451)</span></h2>
+
+                <div class="reviews-controls">
+                    <button type="button" id="reviewFilterToggle" class="review-filter-button" aria-label="Filter reviews"><span aria-hidden="true">☷</span></button>
+
+                    <select id="reviewSort" aria-label="Sort reviews">
+                        <option value="latest">Latest</option>
+                        <option value="highest">Highest Rating</option>
+                        <option value="lowest">Lowest Rating</option>
+                    </select>
+
+                    <button type="button" class="button dark-button"id="writeReviewButton">Write a Review</button>
+                </div>
+            </div>
+
+            <div class="review-filter-panel" id="reviewFilterPanel" hidden>
+                <label for="reviewRatingFilter">Filter by rating</label>
+                <select id="reviewRatingFilter">
+                    <option value="all">All ratings</option>
+                    <option value="5">5 stars</option>
+                    <option value="4">4 stars</option>
+                    <option value="3">3 stars</option>
+                    <option value="2">2 stars</option>
+                    <option value="1">1 star</option>
+                </select>
+                <button type="button" id="clearReviewFilter">Clear</button>
+            </div>
+
+            <form id="reviewForm" class="review-form" hidden>
+                <h3>Write Your Review</h3>
+
+                <label for="reviewerName">Your name</label>
+                <input id="reviewerName" type="text" placeholder="Enter your name" required>
+
+                <label for="reviewRating">Your rating</label>
+                <select id="reviewRating" required>
+                    <option value="5">★★★★★ - Excellent</option>
+                    <option value="4">★★★★ - Very good</option>
+                    <option value="3">★★★ - Good</option>
+                    <option value="2">★★ - Fair</option>
+                    <option value="1">★ - Poor</option>
+                </select>
+
+                <label for="reviewText">Your review</label>
+                <textarea id="reviewText" rows="4" placeholder="Share your experience..." required></textarea>
+
+                <div class="review-form-actions">
+                    <button type="button" class="button" id="cancelReview">Cancel</button>
+                    <button type="submit" class="button dark-button">Submit Review</button>
+                </div>
+
+                <p id="reviewFormMessage" aria-live="polite"></p>
+            </form>
+
+            <div class="reviews-grid" id="reviewsGrid">
+
+                <article class="review-card" data-rating="5" data-date="2023-08-14">
+                    <div class="review-card-top">
+                        <div class="review-stars">★★★★◐</div>
+                        <button class="review-menu" aria-label="Review options">•••</button>
+                    </div>
+                    <h3>Samantha D. <span class="verified">✓</span></h3>
+                    <p class="review-copy">"I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."</p>
+                    <p class="review-date">Posted on August 14, 2023</p>
+                </article>
+
+                <article class="review-card" data-rating="4" data-date="2023-08-15">
+                    <div class="review-card-top">
+                        <div class="review-stars">★★★★</div>
+                        <button class="review-menu" aria-label="Review options">•••</button>
+                    </div>
+                    <h3>Alex M. <span class="verified">✓</span></h3>
+                    <p class="review-copy">"The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me."</p>
+                    <p class="review-date">Posted on August 15, 2023</p>
+                </article>
+
+                <article class="review-card" data-rating="4" data-date="2023-08-16">
+                    <div class="review-card-top">
+                        <div class="review-stars">★★★◐</div>
+                        <button class="review-menu" aria-label="Review options">•••</button>
+                    </div>
+                    <h3>Ethan R. <span class="verified">✓</span></h3>
+                    <p class="review-copy">"This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt."
+                    </p>
+                    <p class="review-date">Posted on August 16, 2023</p>
+                </article>
+
+                <article class="review-card" data-rating="4" data-date="2023-08-17">
+                    <div class="review-card-top">
+                        <div class="review-stars">★★★★</div>
+                        <button class="review-menu" aria-label="Review options">•••</button>
+                    </div>
+                    <h3>Olivia P. <span class="verified">✓</span></h3>
+                        <p class="review-copy">"As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out."</p>
+                        <p class="review-date">Posted on August 17, 2023</p>
+                </article>
+
+                <article class="review-card" data-rating="4" data-date="2023-08-18">
+                    <div class="review-card-top">
+                        <div class="review-stars">★★★★</div>
+                        <button class="review-menu" aria-label="Review options">•••</button>
+                    </div>
+                    <h3>Liam K. <span class="verified">✓</span></h3>
+                    <p class="review-copy">"This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion."</p>
+                    <p class="review-date">Posted on August 18, 2023</p>
+                </article>
+
+                <article class="review-card" data-rating="5" data-date="2023-08-19">
+                    <div class="review-card-top">
+                        <div class="review-stars">★★★★◐</div>
+                        <button class="review-menu" aria-label="Review options">•••</button>
+                    </div>
+                    <h3>Ava H. <span class="verified">✓</span></h3>
+                    <p class="review-copy">"I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter."</p>
+                    <p class="review-date">Posted on August 19, 2023</p>
+                </article>
+
+            </div>
+                <button class="button" id="previousReviews"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></button>
+                <button class="button" id="nextReviews"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container newsletter" id="newsletter">
+            <h2>STAY UPTO DATE ABOUT<br>OUR LATEST OFFERS</h2>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Enter your email address" required> 
+                <button class="button" type="submit">Subscribe to Newletter</button>
+            </form>
+        </div>
+
+        <div class="container footer-grid">
+            <div>
+                <a class="logo" href="index.html">SHOP.CO</a>
+                <p>We have clothes that suit your style and which you're proud to wear</p>
+            </div>
+            <div>
+                <h4>COMPANY</h4>
+                <a href="#">About</a><a href="#">Features</a>
+                <a href="#">Works</a><a href="#">Career</a>
+            </div>
+
+            <div>
+                <h4>HELP</h4>
+                <a href="#">Customer Support</a><a href="#">Delivery Details</a>
+                <a href="#">Terms & Condition</a><a href="#">Privacy Policy</a>
+            </div>
+
+            <div>
+                <h4>FAQ</h4>
+                <a href="#">Account</a><a href="#">Orders</a>
+                <a href="#">Payments</a>
+            </div>
+
+            <div>
+                <h4>RESOURCES</h4>
+                <a href="#">Free eBooks</a><a href="#">How-to Blog</a>
+                <a href="#">Youtube Playlist</a>
+            </div>
+        </div>
+
+        <div class="container copyright">
+            shop.co ©️ 2026. All Rights Reserved.
+            <span>Visa ⚫️⚫️ PayPal G Pay</span>
+        </div>
+    </footer>
+
+    <div id="toat" class="toast"></div>
+    <script src="index.js"></script>
+</body>
+</html>

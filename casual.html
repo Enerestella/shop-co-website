@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>casual</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body data-page="casual">
+
+    <div class="announcement" id="announcement">Sign up and get 20% off your first order.
+        <a href="#newsletter">Sign Up Now</a>
+        <button class="close-banner" aria-label="Close announcement"
+        onclick="this.parentElement.remove()">×</button>
+    </div>
+
+    <header class="header container">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <a href="index.html" class="logo">SHOP.CO</a>
+
+        <nav id="mainNav">
+            <a href="casual.html">Shop⌄</a>
+            <a href="casual.html">On Sale</a>
+            <a href="index.html#newArrivals">New Arrivals</a>
+            <a href="index.html#brands">Brands</a>
+        </nav>
+
+        <input id="siteSearch" class="search" type="search" placeholder="Search for products..." aria-label="Search products">
+
+        <a href="cart.html" class="cart" aria-label="Shopping cart">🛒 <span id="cartCount">0</span>
+        </a>
+        <a href="#" aria-label="Account">◉</a>
+    </header>
+
+    <main class="container category-page">
+        <div class="breadcrumbs">
+            <a href="index.html">Home</a> › Casual
+        </div>
+
+        <div class="category-layout">
+            <aside class="filters-panel" id="filtersPanel">
+                <div class="filters-heading">
+                    <h2>Filters</h2>
+                    <button id="closeFilters" aria-label="Close filters">×</button>
+                </div>
+
+                <div class="filter-links">
+                    <a href="#products" data-category="T-shirts">T-shirts <span>›</span></a>
+                    <a href="#products" data-category="Shorts">Shorts <span>›</span></a>
+                    <a href="#products" data-category="Shirts">Shirts <span>›</span></a>
+                    <a href="#products" data-category="Hoodie">Hoodie <span>›</span></a>
+                    <a href="#products" data-category="Jeans">Jeans <span>›</span></a>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Price</h3>
+                    <div class="price-inputs">
+                        <label>Min<input type="number" id="minPrice" min="0" value="0"></label><label>Max <input type="number" id="maxPrice" min="0" value="500"></label>
+                    </div>
+                    <div class="range-inputs">
+                        <input type="range" id="minRange" min="0" max="500" value="0" aria-label="Minimprice">
+                        <input type="range" id="maxRange" min="0" max="500" value="500" aria-label="Maximum price"></div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Colors</h3>
+                        <div class="color-options">
+                        <button class="color-dot green" data-color="Green" aria-label="Green"></button>
+                        <button class="color-dot red" data-color="Red" aria-label="Red"></button>
+                        <button class="color-dot yellow" data-color="Yellow" aria-label="Yellow"></button>
+                        <button class="color-dot orange" data-color="Orange" aria-label="Orange"></button>
+                        <button class="color-dot cyan" data-color="Cyan" aria-label="Cyan"></button>
+                        <button class="color-dot blue" data-color="Blue" aria-label="Blue"></button>
+                        <button class="color-dot purple" data-color="Purple" aria-label="Purple"></button>
+                        <button class="color-dot pink" data-color="Pink" aria-label="Pink"></button>
+                        <button class="color-dot white" data-color="White" aria-label="White"></button>
+                        <button class="color-dot black" data-color="Black" aria-label="Black"></button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Size</h3>
+                    <div class="size-options">
+                        <button data-size="XX-Small">XX-Small</button>
+                        <button data-size="X-Small">X-Small</button>
+                        <button data-size="Small">Small</button>
+                        <button data-size="Medium">Medium</button>
+                        <button data-size="Large">Large</button>
+                        <button data-size="X-Large">X-Large</button>
+                        <button data-size="XX-Large">XX-Large</button>
+                        <button data-size="3X-Large">3X-Large</button>
+                        <button data-size="4X-Large">4X-Large</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Dress Style</h3>
+                    <div class="style-filter">
+                        <button data-style="Casual">Casual <span>›</span></button>
+                        <button data-style="Formal">Formal <span>›</span></button>
+                        <button data-style="Party">Party <span>›</span></button>
+                        <button data-style="Gym">Gym <span>›</span></button>
+                    </div>
+                </div>
+
+                <button id="applyFilters" class="button dark-button apply-filter">Apply Filter</button>
+                <button id="resetFilters" class="reset-filter">Reset Filters</button>
+            </aside>
+
+            <section class="category-results" id="products">
+                <div class="category-title-row">
+                    <h1>Casual</h1>
+                    <div class="category-tools">
+                        <span id="resultsCount">Showing 1–9 of 0 Products</span>
+                        <label for="sortProducts">Sort by:</label>
+                        <select id="sortProducts">
+                            <option value="popular">Most Popular</option>
+                            <option value="latest">Newest</option>
+                            <option value="priceLow">Price: Low to High</option>
+                            <option value="priceHigh">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                    <button id="openFilters" class="button filter-mobile-button">☷ Filters</button>
+                </div>
+
+                <div id="categoryGrid" class="product-grid category-grid"></div>
+
+                <div class="pagination">
+                    <button id="previousPage" class="button">← Previous</button>
+                    <div id="pageNumbers" class="page-numbers"></div>
+                    <button id="nextPage" class="button">Next →</button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <section class="newsletter container" id="newsletter">
+        <h2>STAY UPTO DATE ABOUT<br> OUR LATEST OFFERS</h2>
+        <form id="newsletterForm">
+            <input type="email" placeholder="✉ Enter your email address"
+            aria-label="Email address" required><button class="button" type="submit">Subscribe to Newsletter</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo">SHOP.CO</a>
+                    <p>We have clothes that suit your style and which you're proud to wear. From women to men.</p>
+                    <p>● 𝕏 &nbsp; ● f &nbsp; ◎ &nbsp; ◉</p>
+                </div>
+
+                <div>
+                    <h4>COMPANY</h4>
+                    <a href="#">About</a><a href="#">Features</a>
+                    <a href="#">Works</a><a href="#">Career</a>
+                </div>
+
+                <div>
+                    <h4>HELP</h4>
+                    <a href="#">Customer Support</a><a href="#">Delivery Details</a>
+                    <a href="#">Terms & Conditions</a><a href="#">Privacy Policy</a>
+                </div>
+
+                <div>
+                    <h4>FAQ</h4>
+                    <a href="#">Account</a><a href="#">Manage Deliveries</a>
+                    <a href="cart.html">Orders</a><a href="#">Payments</a>
+                </div>
+
+                <div>
+                    <h4>RESOURCES</h4>
+                    <a href="#">Free eBooks</a><a href="#">Development Tutorial</a>
+                    <a href="#">How-to Blog</a><a href="#">YouTube Playlist</a>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <span>Shop.co © 2000–2025. All Rights Reserved</span>
+                <span>VISA &nbsp; ● Mastercard &nbsp; PayPal &nbsp; Pay</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status"></div>
+</body>
+</html>

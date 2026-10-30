@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="announcement">
+        Sign upo and get 20% off your first order.
+        <a href="index.html#newsletter"></a>
+    </div>
+
+    <header class="container header">
+        <button class="menu-toggle" id="menuToggle"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></button>
+        <a class="logo" href="index.html">SHOP.CO</a>
+
+        <nav id="mainNav">
+            <a href="index.html#arrival">Shop</a>
+            <a href="index.html#top-seling">On Sale</a>
+            <a href="index.html#arrivals">New Arrivasls</a>
+            <a href="index.html#brands">Brands</a>
+        </nav>
+
+        <input class="search" id="siteSearch" placeholder="Search for Products">
+        <a class="cart" href="#" id="cartButton">🛒 <span id="cartCount">0</span></a>
+    </header>
+
+    
+
+    <main class="container product-page">
+        <p class="breadcrumbs">
+            <a href="index.html">Home</a> ` Shop ` Men ` T-shirt
+        </p>
+
+        <section class="product-detail">
+            <div class="gallery">
+                <div class="thumbnail">
+                    <button class="thumb active" data-image="0">
+                        <img src="images/image 5.png" alt="">
+                    </button>
+
+                    <button class="thumb" data-image="1">
+                        <img src="images/image 6.png" alt="">
+                    </button>
+
+                    <button class="thumb" data-image="2">
+                        <img src="images/image 2.png" alt="Model Wearing Shirt">
+                    </button>
+                </div>
+
+                <div class="main-product-image">
+                    <img id="mainProductImage" src="images/image 2.png" alt="Graphic T-shirt">
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h1>ONE LIFE GRAPHIC T-SHIRT</h1>
+                <div class="rating"><span>⭐⭐⭐⭐⭐</span><small>4.5/5</small></div>
+
+                <div class="price-line">
+                    <strong>$260</strong>
+                    <del>$300</del>
+                    <span class="discount">-40%</span>
+                </div>
+                    
+                <p class="description">
+                    This graphic T-shirt is perfect for any occassion. Crafted from soft and breathable fabric, it offers superior comfort and style.
+                </p>
+
+                <div class="option-block">
+                    <p>Select Colors</p>
+                    <div class="swatches">
+                        <button class="swatch olives selected" data-color="Olive" aria-label="Olive"></button>
+
+                        <button class="swatch teal" data-color="Teal" aria-label="Teal"></button>
+
+                        <button class="swatch navy" data-color="Navy" aria-label="Navy"></button>
+                    </div>
+                    <small id="colorNote">Olive selected</small>
+                </div>
+
+                <div class="option-block">
+                    <p>Choose Size</p>
+                    <div class="sizes">
+                        <button>Small</button>
+                        <button>Medium</button>
+                        <button class="selected">Large</button>
+                        <button>X-Large</button>
+                    </div>
+                    <small id="sizeNote">Large selectd</small>
+                </div>
+
+                <div class="purchase-row">
+                    <div class="quantity">
+                        <button id="minusQty">-</button>
+
+                        <span id="quantity">1</span>
+                        <button id="plusQty">+</button>
+                    </div>
+                    <button class="button dark-button" id="addToCart">Add to Cart</button>
+                </div>
+                <p id="cartMessage" class="sucess-message"></p>
+            </div>
+        </section>
+
+
+        <section class="product-tabs">
+
+            <div id="faqPanel" class="tab-panel" hidden>
+                <h3>Frequently Asked Questions</h3>
+
+                <details>
+                    <summary>What material is this T-shirt?</summary>
+                    <p>it is designed to feel soft and breathable</p>
+                </details>
+                <details>
+                    <summary>How should i wash it?</summary>
+                    <p>Wash with similar colours and follow the care label.</p>
+                </details>
+                <details>
+                    <summary>Can I return my order</summary>
+                    <p>Contact customer support to discuss return  options.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="product-reviews container" id="productReviews">
+
+        <div class="product-tabs">
+            <button class="product-tab" data-tab="details">Product Details</button>
+
+            <button class="product-tab active" data-tab="reviews">Rating &amp; Reviews></button>
+
+            <button class="product-tab" data-tab="faqs">FAQs</button>
+        </div>
+
+        <div class="tab-content" id="detailsContent" hidden>
+            <h2>Product Details</h2>
+            <p>This graphic T-shirt combines comfort, quality and modern style. It is suitable for everyday wear and casual occasions.</p>
+        </div>
+
+        <div class="tab-content" id="faqsContent" hidden>
+            <h2>Frequently Asked Questions</h2>
+
+            <details>
+                <summary>What material is this T-shirt made from?</summary>
+                <p>Please check the product's material information before ordering.</p>
+            </details>
+
+            <details>
+                <summary>How do I choose my size?</summary>
+                <p>Use the size options on the product page to select your preferred fit.</p>
+            </details>
+
+            <details>
+                <summary>Can I return my order?</summary>
+                <p>Return eligibility depends on the store's return policy.</p>
+            </details>
+        </div>
+
+        <div class="tab-content active" id="reviewsContent">
+
+            <div class="reviews-toolbar">
+                <h2>All Reviews <span>(451)</span></h2>
+
+                <div class="reviews-controls">
+                    <button type="button" id="reviewFilterToggle" class="review-filter-button" aria-label="Filter reviews"><span aria-hidden="true">☷</span></button>
+
+                    <select id="reviewSort" aria-label="Sort reviews">
+                        <option value="latest">Latest</option>
+                        <option value="highest">Highest Rating</option>
+                        <option value="lowest">Lowest Rating</option>
+                    </select>
+
+                    <button type="button" class="button dark-button"id="writeReviewButton">Write a Review</button>
+                </div>
+            </div>
+
+            <div class="review-filter-panel" id="reviewFilterPanel" hidden>
+                <label for="reviewRatingFilter">Filter by rating</label>
+                <select id="reviewRatingFilter">
+                    <option value="all">All ratings</option>
+                    <option value="5">5 stars</option>
+                    <option value="4">4 stars</option>
+                    <option value="3">3 stars</option>
+                    <option value="2">2 stars</option>
+                    <option value="1">1 star</option>
+                </select>
+                <button type="button" id="clearReviewFilter">Clear</button>
+            </div>
+
+            <form id="reviewForm" class="review-form" hidden>
+                <h3>Write Your Review</h3>
+
+                <label for="reviewerName">Your name</label>
+                <input id="reviewerName" type="text" placeholder="Enter your name" required>
+
+                <label for="reviewRating">Your rating</label>
+                <select id="reviewRating" required>
+                    <option value="5">★★★★★ - Excellent</option>
+                    <option value="4">★★★★ - Very good</option>
+                    <option value="3">★★★ - Good</option>
+                    <option value="2">★★ - Fair</option>
+                    <option value="1">★ - Poor</option>
+                </select>
+
+                <label for="reviewText">Your review</label>
+                <textarea id="reviewText" rows="4" placeholder="Share your experience..." required></textarea>
+
+                <div class="review-form-actions">
+                    <button type="button" class="button" id="cancelReview">Cancel</button>
+                    <button type="submit" class="button dark-button">Submit Review</button>
+                </div>
+
+                <p id="reviewFormMessage" aria-live="polite"></p>
+            </form>
+
+            <div class="reviews-grid" id="reviewsGrid">
+
+                <article class="review-card" data-rating="5" data-date="2023-08-14">
+                    <div class="review-card-top">
+                        <div class="review-stars">★★★★◐</div>
+                        <button class="review-menu" aria-label="Review options">•••</button>
+                    </div>
+                    <h3>Samantha D. <span class="verified">✓</span></h3>
+                    <p class="review-copy">"I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."</p>
+                    <p class="review-date">Posted on August 14, 2023</p>
+                </article>
+
+                <article class="review-card" data-rating="4" data-date="2023-08-15">
+                    <div class="review-card-top">
+                        <div class="review-stars">★★★★</div>
+                        <button class="review-menu" aria-label="Review options">•••</button>
+                    </div>
+                    <h3>Alex M. <span class="verified">✓</span></h3>
+                    <p class="review-copy">"The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me."</p>
+                    <p class="review-date">Posted on August 15, 2023</p>
+                </article>
+
+                <article class="review-card" data-rating="4" data-date="2023-08-16">
+                    <div class="review-card-top">
+                        <div class="review-stars">★★★◐</div>
+                        <button class="review-menu" aria-label="Review options">•••</button>
+                    </div>
+                    <h3>Ethan R. <span class="verified">✓</span></h3>
+                    <p class="review-copy">"This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt."
+                    </p>
+                    <p class="review-date">Posted on August 16, 2023</p>
+                </article>
+
+                <article class="review-card" data-rating="4" data-date="2023-08-17">
+                    <div class="review-card-top">
+                        <div class="review-stars">★★★★</div>
+                        <button class="review-menu" aria-label="Review options">•••</button>
+                    </div>
+                    <h3>Olivia P. <span class="verified">✓</span></h3>
+                        <p class="review-copy">"As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out."</p>
+                        <p class="review-date">Posted on August 17, 2023</p>
+                </article>
+
+                <article class="review-card" data-rating="4" data-date="2023-08-18">
+                    <div class="review-card-top">
+                        <div class="review-stars">★★★★</div>
+                        <button class="review-menu" aria-label="Review options">•••</button>
+                    </div>
+                    <h3>Liam K. <span class="verified">✓</span></h3>
+                    <p class="review-copy">"This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion."</p>
+                    <p class="review-date">Posted on August 18, 2023</p>
+                </article>
+
+                <article class="review-card" data-rating="5" data-date="2023-08-19">
+                    <div class="review-card-top">
+                        <div class="review-stars">★★★★◐</div>
+                        <button class="review-menu" aria-label="Review options">•••</button>
+                    </div>
+                    <h3>Ava H. <span class="verified">✓</span></h3>
+                    <p class="review-copy">"I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter."</p>
+                    <p class="review-date">Posted on August 19, 2023</p>
+                </article>
+
+            </div>
+
+            <div class="load-reviews-wrapper">
+                <button type="button" id="loadMoreReviews" class="load-reviews-button">Load More Reviews</button>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>YOU MIGHT ALSO LIKE</h2>
+            <div class="product-grid" id="relatedProduct"></div>
+                <img src="images/Frame 32 (1).png" alt="">
+                <img src="images/Frame 33 (1).png" alt="">
+                <img src="images/Frame 34 (1).png" alt="">
+                <img src="images/Frame 38 (1).png" alt="">
+            </div>
+            <button class="button view-button" data-expand="relatedProduct">View All</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container newsletter">
+            <h2>STAY UPTO DATE ABOUT <br>OUR LATEST OFFERS</h2>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Enter your email address" required>
+                <button class="button" type="submit">Subscribe to Newletter</button>
+            </form>
+        </div>
+
+        <div class="container footer-grid">
+            <div><a class="logo" href="index.html">SHOP.CO</a>
+                <p>Clothes that suit your style and which you're proud to wear.</p>
+            </div>
+            <div><h4>COMPANY</h4>
+                <a href="#">About</a>
+                <a href="#">Features</a>
+                <a href="#">Works</a>
+                <a href="#">Career</a>
+            </div>
+
+            <div><h4>HELP</h4>
+                <a href="#">Customer Support</a>
+                <a href="#">Delivery Details</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+
+            <div><h4>FAQ</h4>
+                <a href="#">Account</a>
+                <a href="#">Orders</a>
+                <a href="#">Payments</a>
+            </div>
+
+            <div><h4>RESOURCES</h4>
+                <a href="#">Free eBooks</a>
+                <a href="#">How-to Blog</a>
+                <a href="#">Youtube</a>
+            </div>
+            <div class="container copyright">Shop.co ©️ 2026. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <script src="index.js"></script>
+</body>
+</html>

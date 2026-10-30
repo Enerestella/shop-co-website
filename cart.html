@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+<body data-page="cart">
+    <div class="announcement" id="announcement">
+        Sign up and get 20% off your first order.
+        <a href="#newsletter">Sign Up Now</a>
+        <button class="close-banner" aria-label="Close announcement" onclick="this.parentElement.remove()">×</button>
+    </div>
+
+    <header class="header container">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <a href="index.html" class="logo">SHOP.CO</a>
+
+        <nav id="mainNav">
+            <a href="casual.html">Shop⌄</a>
+            <a href="casual.html">On Sale</a>
+            <a href="index.html#newArrivals">New Arrivals</a>
+            <a href="index.html#brands">Brands</a>
+        </nav>
+
+        <input id="siteSearch" class="search" type="search" placeholder="Search for products..." aria-label="Search products">
+
+        <a href="cart.html" class="cart" aria-label="Shopping cart">🛒 <span id="cartCount">3</span></a>
+        <a href="#" aria-label="Account">◉</a>
+    </header>
+
+    <main class="container cart-page">
+        <div class="breadcrumbs">
+            <a href="index.html">Home</a> › Cart
+        </div>
+
+        <h1 class="page-title">YOUR CART</h1>
+
+        <div class="cart-layout">
+            <section class="cart-items-panel">
+                <div id="cartItems"></div>
+
+                <div id="emptyCart" hidden>
+                    <h2>Your cart is empty</h2>
+                    <p>Looks like you haven't added anything yet.</p>
+                    <a class="button dark-button" href="casual.html">Continue Shopping</a>
+                </div>
+            </section>
+
+            <aside class="order-summary"> 
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="subtotal">$565</strong>
+                </div>
+
+                <div class="summary-row discount-row">
+                    <span>Discount (20%)</span>
+                    <strong id="discount">-$113</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Delivery Fee</span>
+                    <strong id="delivery">$15</strong>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-row total-row">
+                    <strong>Total</strong>
+                    <strong id="total">$467</strong>
+                </div>
+
+                <form id="promoForm" class="promo-form">
+                    <input id="promoCode" type="text" placeholder="◇  Add promo code" aria-label="Promo code">
+                    <button type="submit" class="button dark-button">Apply</button>
+                </form>
+
+                <p id="promoMessage" class="promo-message" aria-live="polite"></p>
+                <button type="button" class="button dark-button checkout-button" id="checkoutButton">Go to Checkout <span>→</span></button>
+
+                <p id="checkoutMessage" class="promo-message" aria-live="polite"></p>
+            </aside>
+        </div>
+    </main>
+
+    <section class="newsletter container" id="newsletter">
+        <h2>STAY UPTO DATE ABOUT<br> OUR LATEST OFFERS</h2>
+        <form id="newsletterForm">
+            <input type="email" placeholder="✉ Enter your email address" aria-label="Email address" required>
+            <button class="button" type="submit">Subscribe to Newsletter</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo">SHOP.CO</a>
+                    <p>We have clothes that suit your style and which you're proud to wear. From women to men.</p>
+                    <p>● 𝕏 &nbsp; ● f &nbsp; ◎ &nbsp; ◉</p>
+                </div>
+
+                <div>
+                    <h4>COMPANY</h4>
+                    <a href="#">About</a>
+                    <a href="#">Features</a>
+                    <a href="#">Works</a>
+                    <a href="#">Career</a>
+                </div>
+
+                <div>
+                    <h4>HELP</h4>
+                    <a href="#">Customer Support</a>
+                    <a href="#">Delivery Details</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+
+                <div>
+                    <h4>FAQ</h4>
+                    <a href="#">Account</a>
+                    <a href="#">Manage Deliveries</a>
+                    <a href="cart.html">Orders</a>
+                    <a href="#">Payments</a>
+                </div>
+
+                <div>
+                    <h4>RESOURCES</h4>
+                    <a href="#">Free eBooks</a>
+                    <a href="#">Development Tutorial</a>
+                    <a href="#">How-to Blog</a>
+                    <a href="#">YouTube Playlist</a>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <span>Shop.co © 2000–2025. All Rights Reserved</span>
+                <span>VISA &nbsp; ● Mastercard &nbsp; PayPal &nbsp; Pay</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status"></div>
+</body>
+</html>
